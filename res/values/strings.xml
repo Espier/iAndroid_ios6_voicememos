@@ -1,4 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="evm_app_name">Voice Memos</string>
+    <!-- the name under which recordings will be visible in the media database is formatted like this -->
+    <string name="date_format">yy-MM-dd</string>
+    <string name="date_time_format">yy-MM-dd HH:mm</string>
+    <string name="time_format">HH:mm</string>
+    <!-- Do not translate. Duration format for duration < 1 hour -->
+    <string name="durationformatshort" translatable="false">%2$d:%5$02d</string>
+    <!-- Do not translate. Duration format for duration >= 1 hour -->
+    <string name="durationformatlong" translatable="false">%1$d:%3$02d:%5$02d</string>
+    
+     <string name="detail_date_time_format">录制于：yyyy年MM月dd日 E kk:mm</string>
+     <string name="detail_date_format">录制于：yyyy年MM月dd日 E</string>
+    
+     <string name="recording">正在录音</string>
+     <string name="record_stop">录音已暂停</string>
+     
+    <string name="trim_voice_memo">修剪语音备忘录</string>
+    <string name="cancel">取消</string>
+    <string name="trim_memo">修剪备忘录</string>
+    <string name="memo_short">修剪备忘录内容太短，修剪失败</string>
+    <string name="share_memo">共享</string>
+    <string name="finish">finish</string>
+    <string name="list_share">共享</string>
+     <string name="list_share_title">共享语音备忘录</string>
+    <string name="list_delete">删除语音备忘录</string>
+      <string name="delete">删除</string>
+     <string name="list_delete_msg">确定删除该条备忘录吗</string>
+    <string name="detail_title">简介</string>
+    <string name="back">返回</string>
+    <string name="label_title">标签</string>
+    <string name="label_custom_title">自定</string>
+    
+      <string name="storage_is_full">Storage is full</string>
+    <!-- label shown when the recording has reached maximum allowed file size -->
+    <string name="max_length_reached">Maximum length reached</string>
+    <!-- label shown when there is no sd card available to record to [CHAR LIMIT=30] -->
+    <string name="insert_sd_card" product="nosdcard">Mount USB storage</string>
+    <!-- label shown when there is no sd card available to record to -->
+    <string name="insert_sd_card" product="default">Insert an SD card</string>
+      <!-- shown as the message in a dialog when an error occured because of an error accessing the sd card [CHAR LIMIT=NONE] -->
+    <string name="error_sdcard_access" product="nosdcard">Can\'t access USB storage.</string>
+    <!-- shown as the message in a dialog when an error occured because of an error accessing the sd card -->
+    <string name="error_sdcard_access" product="default">Can\'t access SD card.</string>
+    <!-- shown as the message in a dialog when the app encountered an unspecified internal error -->
+    <string name="error_app_internal">Internal application error.</string>
+    <!-- shown as the message in a dialog when the recording could not be added to the media database -->
+    <string name="error_mediadb_new_record">Couldn\'t save recorded audio.</string>
+
 </resources>

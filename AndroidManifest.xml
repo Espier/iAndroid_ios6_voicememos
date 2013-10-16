@@ -1,15 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="org.espier.voicememos"
-      android:versionCode="1"
-      android:versionName="1.0.0">
-    <application android:label="@string/evm_app_name" android:icon="@drawable/icon">
-        <activity android:name="EspierVoiceMemos"
-                  android:label="@string/evm_app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-    </application>
+	package="org.espier.voicememos" android:versionCode="1"
+	android:versionName="1.0.0">
+
+	<uses-sdk android:minSdkVersion="8" />
+
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+	<application android:icon="@drawable/icon" android:label="@string/evm_app_name">
+		<provider android:name=".db.MemosProvider"
+			android:authorities="org.espier.voicememos.Memo" />
+
+		<activity android:name=".ui.MemoMain"
+			android:screenOrientation="portrait" android:label="@string/evm_app_name"
+			android:theme="@android:style/Theme.NoTitleBar">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".ui.MemoList"
+			android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
+		</activity>
+		<activity android:name=".ui.MemoDelete"
+			android:screenOrientation="portrait"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<activity android:name=".ui.MemoDetail"
+			android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" />
+		<activity android:name=".ui.MemoEdit"
+			android:screenOrientation="portrait"
+			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+		<activity android:name=".ui.LabelCustom"
+			android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" />
+		<activity android:name=".ui.LabelSelect"
+			android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" />
+	</application>
+
 </manifest>

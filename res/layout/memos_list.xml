@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@android:color/white" android:orientation="vertical">
+
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:background="@drawable/topbar_bg" android:gravity="center">
+
+
+
+		<TextView android:id="@+id/title" android:text="@string/evm_app_name"
+			android:layout_width="0dip" android:layout_height="wrap_content"
+			android:layout_weight="1" android:ellipsize="end" android:gravity="center"
+			android:shadowColor="@color/ios_navigation_bar_title_shadow_color"
+			android:shadowDy="-2" android:shadowRadius="1" android:singleLine="true"
+			android:textColor="@color/ios_navigation_bar_title_color"
+			android:textSize="@dimen/ios_activity_title_size" />
+
+		<Button android:id="@+id/memo_list_finish" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginRight="5dip"
+			android:background="@drawable/ioslike_right_btn" android:gravity="center"
+			android:paddingLeft="10dip" android:paddingRight="10dip"
+			android:shadowColor="@color/ios_navigation_bar_text_shadow_color"
+			android:shadowDy="-2" android:shadowRadius="1" android:text="@string/finish"
+			android:textColor="@color/ios_navigation_bar_text_color"
+			android:textSize="@dimen/ios_activity_reture_btn_title_size"
+			android:textStyle="bold" />
+
+	</LinearLayout>
+
+	<org.espier.ios6.ui.IosLikeListView
+		android:id="@+id/memo_list" android:cacheColorHint="#00000000"
+		android:scrollbars="none" android:layout_width="fill_parent"
+		android:layout_height="fill_parent" android:layout_weight="1" />
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@drawable/list_buttom_bg"
+		android:orientation="vertical">
+
+		<LinearLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginTop="25dip">
+
+			<TextView android:id="@+id/current_positon"
+				android:layout_width="50dp" android:layout_height="wrap_content"
+				android:gravity="center" android:text="0:00" />
+
+
+			<SeekBar android:id="@android:id/progress"
+				android:layout_width="0dip" android:layout_height="wrap_content"
+				android:layout_weight="1" android:drawablePadding="5dip"
+				android:progressDrawable="@layout/seekbar_style" android:thumb="@drawable/seekbar_thumb"
+				android:minHeight="8dip" android:maxHeight="8dip"
+				android:paddingLeft="10dip" android:paddingRight="10dip"
+				android:gravity="center_vertical" />
+
+			<TextView android:id="@+id/current_remain" android:text="-0:00"
+				android:layout_width="50dp" android:layout_height="wrap_content"
+				android:gravity="center" />
+		</LinearLayout>
+		<LinearLayout android:id="@+id/buttomLayout"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+
+			android:layout_marginTop="20dip" android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip">
+			<Button android:id="@+id/memo_share" android:gravity="center" 
+				android:layout_width="fill_parent" android:layout_weight="1" android:textStyle="bold" 
+				android:layout_height="70dip" android:textColor="@android:color/white"
+				android:textSize="20sp" android:layout_marginRight="10dip"
+				android:text="@string/list_share" android:background="@drawable/btn_blue_selector" />
+			<Button android:id="@+id/memo_del" android:layout_marginLeft="10dip"
+				android:gravity="center" android:layout_width="fill_parent"
+				android:layout_height="70dip" android:layout_weight="1" android:textStyle="bold" 
+				android:textColor="@android:color/white" android:textSize="20sp"
+				android:background="@drawable/btn_red_selector" android:text="@string/delete" />
+		</LinearLayout>
+
+	</LinearLayout>
+
+</LinearLayout>

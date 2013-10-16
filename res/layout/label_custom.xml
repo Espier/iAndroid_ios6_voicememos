@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@drawable/detail_bg" android:orientation="vertical">
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent" android:layout_height="wrap_content"
+		android:background="@drawable/topbar_bg" android:gravity="center">
+
+		<Button android:id="@+id/label_custom_back" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="5dip"
+			android:background="@drawable/ioslike_arrow_left_btn"
+			android:gravity="center" android:paddingLeft="15dip"
+			android:paddingRight="10dip" android:shadowColor="@color/ios_navigation_bar_text_shadow_color"
+			android:shadowDy="-2" android:shadowRadius="1" android:text="@string/label_title"
+			android:textColor="@color/ios_navigation_bar_text_color"
+			android:textSize="@dimen/ios_activity_reture_btn_title_size"
+			android:textStyle="bold" />
+
+
+		<TextView android:id="@+id/title" android:text="@string/label_custom_title"
+			android:layout_width="0dip" android:layout_height="wrap_content"
+			android:layout_weight="1" android:ellipsize="end" android:gravity="center"
+			android:shadowColor="@color/ios_navigation_bar_title_shadow_color"
+			android:shadowDy="-2" android:shadowRadius="1" android:singleLine="true"
+			android:textColor="@color/ios_navigation_bar_title_color"
+			android:textSize="@dimen/ios_activity_title_size" />
+
+		<Button android:id="@+id/label_finish" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginRight="5dip"
+			android:background="@drawable/ioslike_right_btn" android:gravity="center"
+			android:paddingLeft="10dip" android:paddingRight="10dip"
+			android:shadowColor="@color/ios_navigation_bar_text_shadow_color"
+			android:shadowDy="-2" android:shadowRadius="1" android:text="@string/finish"
+			android:textColor="@color/ios_navigation_bar_text_color"
+			android:textSize="@dimen/ios_activity_reture_btn_title_size"
+			android:textStyle="bold" />
+
+	</LinearLayout>
+
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:background="@drawable/custom_label_bg"
+		android:layout_gravity="center_vertical" android:gravity="center_vertical"
+		android:layout_marginTop="100dip" android:layout_marginLeft="20dip"
+		android:layout_marginRight="20dip">
+		<EditText android:id="@+id/label_edit" android:layout_width="wrap_content"
+			android:textColor="@color/blue" android:layout_height="wrap_content"
+			android:background="#00FFFFFF" android:singleLine="true"
+			android:layout_weight="1"/>
+		<ImageView android:id="@+id/clear_label"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:background="@drawable/label_clear" />
+	</LinearLayout>
+
+</LinearLayout>
