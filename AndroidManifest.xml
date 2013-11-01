@@ -15,7 +15,7 @@
 			android:authorities="org.espier.voicememos.Memo" />
 
 		<activity android:name=".ui.MemoMain"
-			android:screenOrientation="portrait" android:label="@string/evm_app_name"
+			android:label="@string/evm_app_name"
 			android:theme="@android:style/Theme.NoTitleBar">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />

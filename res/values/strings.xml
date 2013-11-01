@@ -11,27 +11,28 @@
     <!-- Do not translate. Duration format for duration >= 1 hour -->
     <string name="durationformatlong" translatable="false">%1$d:%3$02d:%5$02d</string>
     
-     <string name="detail_date_time_format">录制于：yyyy年MM月dd日 E kk:mm</string>
-     <string name="detail_date_format">录制于：yyyy年MM月dd日 E</string>
+     <string name="detail_date_time_format">yyyy-MM-dd E kk:mm</string>
+     <string name="detail_date_format">yyyy-MM-dd E</string>
+     <string name="record_time_prefix">Recorded on </string>
     
-     <string name="recording">正在录音</string>
-     <string name="record_stop">录音已暂停</string>
+     <string name="recording">Recording</string>
+     <string name="record_stop">Pause</string>
      
-    <string name="trim_voice_memo">修剪语音备忘录</string>
-    <string name="cancel">取消</string>
-    <string name="trim_memo">修剪备忘录</string>
-    <string name="memo_short">修剪备忘录内容太短，修剪失败</string>
-    <string name="share_memo">共享</string>
-    <string name="finish">finish</string>
-    <string name="list_share">共享</string>
-     <string name="list_share_title">共享语音备忘录</string>
-    <string name="list_delete">删除语音备忘录</string>
-      <string name="delete">删除</string>
-     <string name="list_delete_msg">确定删除该条备忘录吗</string>
-    <string name="detail_title">简介</string>
-    <string name="back">返回</string>
-    <string name="label_title">标签</string>
-    <string name="label_custom_title">自定</string>
+    <string name="trim_voice_memo">Trim Voice Memo</string>
+    <string name="cancel">Cancle</string>
+    <string name="trim_memo">Trim Voice Memo</string>
+    <string name="memo_short">Fail to trim because length of voice memo is too short</string>
+    <string name="share_memo">Share</string>
+    <string name="finish">Done</string>
+    <string name="list_share">Share</string>
+     <string name="list_share_title">Share Voice Memo</string>
+    <string name="list_delete">Delete Voice Memo</string>
+      <string name="delete">Delete</string>
+   
+    <string name="detail_title">Info</string>
+    <string name="back">Back</string>
+    <string name="label_title">Label</string>
+    <string name="label_custom_title">Custom</string>
     
       <string name="storage_is_full">Storage is full</string>
     <!-- label shown when the recording has reached maximum allowed file size -->

@@ -3,31 +3,28 @@
 	android:layout_width="fill_parent" android:layout_height="fill_parent"
 	android:background="@android:color/white" android:orientation="vertical">
 
-	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-		android:layout_width="match_parent" android:layout_height="wrap_content"
-		android:background="@drawable/topbar_bg" android:gravity="center">
-
-
+	<RelativeLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:background="@drawable/topbar_bg">
 
 		<TextView android:id="@+id/title" android:text="@string/evm_app_name"
-			android:layout_width="0dip" android:layout_height="wrap_content"
-			android:layout_weight="1" android:ellipsize="end" android:gravity="center"
+			android:layout_centerInParent="true" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:ellipsize="end"
+			android:layout_centerVertical="true"
 			android:shadowColor="@color/ios_navigation_bar_title_shadow_color"
-			android:shadowDy="-2" android:shadowRadius="1" android:singleLine="true"
-			android:textColor="@color/ios_navigation_bar_title_color"
+			android:singleLine="true" android:textColor="@color/ios_navigation_bar_title_color"
 			android:textSize="@dimen/ios_activity_title_size" />
 
-		<Button android:id="@+id/memo_list_finish" android:layout_width="wrap_content"
-			android:layout_height="wrap_content" android:layout_marginRight="5dip"
-			android:background="@drawable/ioslike_right_btn" android:gravity="center"
-			android:paddingLeft="10dip" android:paddingRight="10dip"
+		<Button android:id="@+id/memo_list_finish"
+			android:layout_centerVertical="true" android:layout_width="wrap_content"
+			android:layout_alignParentRight="true" android:layout_height="wrap_content"
+			android:layout_marginRight="5dip" android:background="@drawable/ioslike_right_btn"
 			android:shadowColor="@color/ios_navigation_bar_text_shadow_color"
 			android:shadowDy="-2" android:shadowRadius="1" android:text="@string/finish"
 			android:textColor="@color/ios_navigation_bar_text_color"
 			android:textSize="@dimen/ios_activity_reture_btn_title_size"
 			android:textStyle="bold" />
 
-	</LinearLayout>
+	</RelativeLayout>
 
 	<org.espier.ios6.ui.IosLikeListView
 		android:id="@+id/memo_list" android:cacheColorHint="#00000000"
@@ -63,16 +60,18 @@
 
 			android:layout_marginTop="20dip" android:layout_marginLeft="10dip"
 			android:layout_marginRight="10dip">
-			<Button android:id="@+id/memo_share" android:gravity="center" 
-				android:layout_width="fill_parent" android:layout_weight="1" android:textStyle="bold" 
-				android:layout_height="70dip" android:textColor="@android:color/white"
-				android:textSize="20sp" android:layout_marginRight="10dip"
-				android:text="@string/list_share" android:background="@drawable/btn_blue_selector" />
+			<Button android:id="@+id/memo_share" android:gravity="center"
+				android:layout_width="fill_parent" android:layout_weight="1"
+				android:textStyle="bold" android:layout_height="70dip"
+				android:textColor="@android:color/white" android:textSize="20sp"
+				android:layout_marginRight="10dip" android:text="@string/list_share"
+				android:background="@drawable/btn_blue_selector" />
 			<Button android:id="@+id/memo_del" android:layout_marginLeft="10dip"
 				android:gravity="center" android:layout_width="fill_parent"
-				android:layout_height="70dip" android:layout_weight="1" android:textStyle="bold" 
-				android:textColor="@android:color/white" android:textSize="20sp"
-				android:background="@drawable/btn_red_selector" android:text="@string/delete" />
+				android:layout_height="70dip" android:layout_weight="1"
+				android:textStyle="bold" android:textColor="@android:color/white"
+				android:textSize="20sp" android:background="@drawable/btn_red_selector"
+				android:text="@string/delete" />
 		</LinearLayout>
 
 	</LinearLayout>

@@ -1,152 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@drawable/detail_bg"
-    android:orientation="vertical" >
-   <LinearLayout 
-        android:layout_width="match_parent" android:layout_height="wrap_content"
-        android:background="@drawable/topbar_bg" android:gravity="center">
-        
-      <Button
-        android:id="@+id/detail_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="5dip"
-        android:background="@drawable/ioslike_arrow_left_btn"
-        android:gravity="center"
-        android:paddingLeft="15dip"
-        android:paddingRight="10dip"
-        android:shadowColor="@color/ios_navigation_bar_text_shadow_color"
-        android:shadowDy="-2"
-        android:shadowRadius="1"
-        android:text="@string/back"
-        android:textColor="@color/ios_navigation_bar_text_color"
-        android:textSize="@dimen/ios_activity_reture_btn_title_size"
-        android:textStyle="bold" />
+	android:layout_width="fill_parent" android:layout_height="fill_parent"
+	android:background="@drawable/detail_bg" android:orientation="vertical">
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:background="@drawable/topbar_bg"
+		android:gravity="center">
+
+		<Button android:id="@+id/detail_back" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="5dip"
+			android:background="@drawable/ioslike_arrow_left_btn"
+			android:gravity="center" android:paddingLeft="15dip"
+			android:paddingRight="10dip" android:shadowColor="@color/ios_navigation_bar_text_shadow_color"
+			android:shadowDy="-2" android:shadowRadius="1" android:text="@string/back"
+			android:textColor="@color/ios_navigation_bar_text_color"
+			android:textSize="@dimen/ios_activity_reture_btn_title_size"
+			android:textStyle="bold" />
 
 
-        <TextView android:id="@+id/title" android:text="@string/detail_title"
-            android:layout_width="0dip" android:layout_height="wrap_content"
-            android:layout_weight="1" android:ellipsize="end" android:gravity="center"
-            android:shadowColor="@color/ios_navigation_bar_title_shadow_color"
-            android:shadowDy="-2" android:shadowRadius="1" android:singleLine="true"
-            android:textColor="@color/ios_navigation_bar_title_color"
-            android:textSize="@dimen/ios_activity_title_size" />
+		<TextView android:id="@+id/title" android:text="@string/detail_title"
+			android:layout_width="0dip" android:layout_height="wrap_content"
+			android:layout_weight="1" android:ellipsize="end" android:gravity="center"
+			android:shadowColor="@color/ios_navigation_bar_title_shadow_color"
+			android:shadowDy="-2" android:shadowRadius="1" android:singleLine="true"
+			android:textColor="@color/ios_navigation_bar_title_color"
+			android:textSize="@dimen/ios_activity_title_size" />
 
-         <Button
-        android:id="@+id/buttonRight"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginRight="5dip"
-        android:background="@drawable/ioslike_right_btn"
-        android:gravity="center"
-        android:paddingLeft="10dip"
-        android:paddingRight="10dip"
-        android:shadowColor="@color/ios_navigation_bar_text_shadow_color"
-        android:shadowDy="-2"
-        android:shadowRadius="1"
-        android:text="@string/return_button"
-        android:textColor="@color/ios_navigation_bar_text_color"
-        android:textSize="@dimen/ios_activity_reture_btn_title_size"
-        android:textStyle="bold"
-        android:visibility="invisible" />
+		<Button android:id="@+id/buttonRight" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginRight="5dip"
+			android:background="@drawable/ioslike_right_btn" android:gravity="center"
+			android:paddingLeft="10dip" android:paddingRight="10dip"
+			android:shadowColor="@color/ios_navigation_bar_text_shadow_color"
+			android:shadowDy="-2" android:shadowRadius="1" android:text="@string/return_button"
+			android:textColor="@color/ios_navigation_bar_text_color"
+			android:textSize="@dimen/ios_activity_reture_btn_title_size"
+			android:textStyle="bold" android:visibility="invisible" />
 
-    </LinearLayout>
+	</LinearLayout>
 
-    <RelativeLayout
-        android:layout_width="fill_parent"
-        android:layout_height="150dip"
-        android:layout_marginLeft="10dip"
-        android:layout_marginRight="10dip"
-        android:layout_marginTop="15dip"
-        android:background="@drawable/custom_label_bg" >
+	<RelativeLayout android:layout_width="fill_parent" android:id="@+id/detail_layout"
+		android:layout_height="150dip" android:layout_marginLeft="10dip"
+		android:layout_marginRight="10dip" android:layout_marginTop="15dip"
+		android:background="@drawable/custom_label_bg_selector">
 
-        <ImageView
-            android:id="@+id/icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="15dip"
-            android:layout_marginTop="15dip"
-            android:src="@drawable/detail_microphone_icon" />
+		<ImageView android:id="@+id/icon" android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="15dip"
+			android:layout_marginTop="15dip" android:src="@drawable/detail_microphone_icon" />
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dip"
-            android:layout_marginTop="15dip"
-            android:layout_toRightOf="@id/icon"
-            android:layout_weight="1"
-            android:orientation="vertical" >
+		<LinearLayout android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:layout_marginLeft="10dip"
+			android:layout_marginTop="15dip" android:layout_toRightOf="@id/icon"
+			android:layout_weight="1" android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/detail_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="18sp"/>
+			<TextView android:id="@+id/detail_label"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:textColor="@color/black" android:textStyle="bold"
+				android:textSize="18sp" />
 
-            <TextView
-                android:id="@+id/detail_duration"
-                android:textSize="15sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
+			<TextView android:id="@+id/detail_duration"
+				android:textSize="15sp" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
 
-            <TextView
-                android:id="@+id/detail_create_date"
-                android:layout_marginTop="25dip"
-                android:textStyle="bold"
-                android:textColor="#385487"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                />
-        </LinearLayout>
+			<TextView android:id="@+id/detail_create_date"
+				android:layout_marginTop="25dip" android:textStyle="bold"
+				android:textColor="#385487" android:layout_width="wrap_content"
+				android:layout_height="wrap_content" />
+		</LinearLayout>
 
-        <ImageView
-            android:id="@+id/detail_label_select"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dip"
-            android:layout_marginRight="10dip"
-            android:src="@drawable/right_row_selector" />
-    </RelativeLayout>
+		<ImageView android:id="@+id/detail_label_select"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:layout_alignParentRight="true" android:layout_centerVertical="true"
+			android:layout_marginLeft="10dip" android:layout_marginRight="10dip"
+			android:src="@drawable/right_row_selector" />
+	</RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dip"
-        android:gravity="center"
-        android:orientation="horizontal" >
+	<LinearLayout android:layout_width="fill_parent"
+		android:layout_height="wrap_content" android:layout_marginTop="10dip"
+		android:gravity="center" android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/detail_trim_memo"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dip"
-            android:layout_marginRight="10dip"
-            android:layout_weight="1"
-            android:textColor="#385487"
-            android:background="@drawable/custom_label_bg"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:text="@string/trim_memo" />
+		<TextView android:id="@+id/detail_trim_memo"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_marginLeft="10dip" android:layout_marginRight="10dip"
+			android:layout_weight="1" android:textColor="#385487"
+			android:background="@drawable/custom_label_bg_selector"
+			android:gravity="center" android:textStyle="bold" android:text="@string/trim_memo" />
 
-        <TextView
-            android:id="@+id/detail_share_memo"
-            android:textStyle="bold"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dip"
-            android:layout_marginRight="10dip"
-            android:textColor="#385487"
-            android:layout_weight="1"
-            android:background="@drawable/custom_label_bg"
-            android:gravity="center"
-            android:text="@string/share_memo" />
-    </LinearLayout>
+		<TextView android:id="@+id/detail_share_memo"
+			android:textStyle="bold" android:layout_width="fill_parent"
+			android:layout_height="wrap_content" android:layout_marginLeft="10dip"
+			android:layout_marginRight="10dip" android:textColor="#385487"
+			android:layout_weight="1" android:background="@drawable/custom_label_bg_selector"
+			android:gravity="center" android:text="@string/share_memo" />
+	</LinearLayout>
 
 </LinearLayout>

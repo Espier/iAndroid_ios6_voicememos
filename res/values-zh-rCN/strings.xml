@@ -17,7 +17,9 @@
 
 
 	<string name="detail_title">简介</string>
-	<string name="detail_time_format">录制于：yyyy年MM月dd日 E kk:mm</string>
+	<string name="detail_time_format">yyyy年MM月dd日 E kk:mm</string>
+	<string name="detail_date_format">yyy-MM-dd E</string>
+	<string name="record_time_prefix">录制于：</string>
 	<string name="back">返回</string>
 
 	<string name="label_title">标签</string>
@@ -26,12 +28,17 @@
 
 	<string name="storage_is_full" msgid="416039755956726221">"存储空间已满"</string>
 	<string name="max_length_reached" msgid="6398215743584093353">"已达到长度上限"</string>
-	<string name="insert_sd_card" product="nosdcard" msgid="4609407750669086933">"装载 USB存储设备"</string>
-	<string name="insert_sd_card" product="default" msgid="1007630222084726808">"请插入 SD 卡"</string>
-	<string name="error_sdcard_access" product="nosdcard" msgid="86629081075681774">"无法访问USB 存储设备。"</string>
-	<string name="error_sdcard_access" product="default" msgid="5750308258096153274">"无法访问SD 卡。"</string>
+	<string name="insert_sd_card" product="nosdcard" msgid="4609407750669086933">"装载
+		USB存储设备"</string>
+	<string name="insert_sd_card" product="default" msgid="1007630222084726808">"请插入 SD 卡"
+	</string>
+	<string name="error_sdcard_access" product="nosdcard" msgid="86629081075681774">"无法访问USB
+		存储设备。"</string>
+	<string name="error_sdcard_access" product="default" msgid="5750308258096153274">"无法访问SD
+		卡。"</string>
 	<string name="error_app_internal" msgid="312884382388702022">"发生内部应用错误。"</string>
-	<string name="error_mediadb_new_record" msgid="261714902333432462">"无法保存录制的音频。"</string>
+	<string name="error_mediadb_new_record" msgid="261714902333432462">"无法保存录制的音频。"
+	</string>
 
 </resources>
 
