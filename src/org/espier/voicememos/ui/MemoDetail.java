@@ -136,7 +136,8 @@ public class MemoDetail extends BaseUi implements OnClickListener {
     if (resultCode == Activity.RESULT_OK) {
       switch (requestCode) {
         case REQUEST_LABEL_SELECT:
-          mLabelView.setText(data.getStringExtra(LabelSelect.LABEL_NEW));
+          mLabelName = data.getStringExtra(LabelSelect.LABEL_NEW);
+          mLabelView.setText(mLabelName);
           mLabelType = data.getIntExtra(LabelSelect.LABEL_TYPE, 0);
           break;
         case REQUEST_EDIT_MEMO:

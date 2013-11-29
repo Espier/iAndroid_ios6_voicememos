@@ -1,5 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="evm_app_name">語音備忘錄</string>
-</resources>
+    <string name="trim_voice_memo">修剪語音備忘錄</string>
+    <string name="cancel">取消</string>
+    <string name="trim_memo">修剪備忘錄</string>
+    <string name="memo_short">修剪備忘錄內容太短，修剪失敗</string>
+    <string name="share_memo">共享</string>
+    <string name="recording">正在錄音</string>
+    <string name="record_stop">錄音已暫停</string>
 
+    <string name="finish">完成</string>
+    <string name="list_share">共享</string>
+    <string name="list_share_title">共享語音備忘錄</string>
+    <string name="list_delete">刪除語音備忘錄</string>
+    <string name="delete">刪除</string>
+
+
+    <string name="detail_title">簡介</string>
+    <string name="detail_time_format">yyyy年MM月dd日 E kk:mm</string>
+    <string name="detail_date_format">yyy-MM-dd E</string>
+    <string name="record_time_prefix">錄制于：</string>
+    <string name="back">返回</string>
+
+    <string name="label_title">標簽</string>
+
+    <string name="label_custom_title">自定</string>
+
+    <string name="storage_is_full" >"存儲空間已滿"</string>
+    <string name="max_length_reached" >"已達到長度上限"</string>
+    <string name="insert_sd_card" product="nosdcard" >"裝載
+        USB存儲設備"</string>
+    <string name="insert_sd_card" product="default" >"請插入 SD 卡"
+    </string>
+    <string name="error_sdcard_access" product="nosdcard" >"無法訪問USB
+        存儲設備。"</string>
+    <string name="error_sdcard_access" product="default" >"無法訪問SD
+        卡。"</string>
+    <string name="error_app_internal" >"發生內部應用錯誤。"</string>
+    <string name="error_mediadb_new_record" >"無法保存錄制的音頻。"
+    </string>
+
+</resources>

@@ -193,9 +193,14 @@ public class Recorder implements OnCompletionListener, OnErrorListener {
 
   public void stopRecording() {
     if (mRecorder != null) {
-      mRecorder.stop();
-      mRecorder.release();
-      mRecorder = null;
+      try {
+        mRecorder.stop();
+        mRecorder.release();
+        mRecorder = null;
+      } catch (RuntimeException ex) {
+        mRecorder = null;
+      }
+
     }
 
     mergeFiles(mTempMemoFiles);

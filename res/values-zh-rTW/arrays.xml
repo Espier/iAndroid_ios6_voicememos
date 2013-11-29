@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string-array name="labels">
+		<item>無</item>
+        <item>Podcast</item>
+        <item>采訪</item>
+        <item>演講</item>
+        <item>主意</item>
+        <item>會議</item>
+        <item>備忘錄</item>
+        <item>自定</item>
+	</string-array>
+</resources>
