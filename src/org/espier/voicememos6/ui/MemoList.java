@@ -14,16 +14,16 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.espier.voicememos.ui;
+package org.espier.voicememos6.ui;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.espier.voicememos.R;
-import org.espier.voicememos.model.VoiceMemo;
-import org.espier.voicememos.util.MemosUtils;
-import org.espier.voicememos.util.Recorder;
+import org.espier.voicememos6.R;
+import org.espier.voicememos6.model.VoiceMemo;
+import org.espier.voicememos6.util.MemosUtils;
+import org.espier.voicememos6.util.Recorder;
 
 import android.app.Activity;
 import android.content.ContentUris;
@@ -305,7 +305,6 @@ public class MemoList extends BaseUi
     @Override
     public void bindView(View view, Context context, Cursor cursor) {
 
-      view.setBackgroundColor(mCurrentBgColor);
       final ViewHolder vh = (ViewHolder) view.getTag();
       vh.tag.setText(cursor.getString(mLabelIdx));
 
@@ -332,62 +331,81 @@ public class MemoList extends BaseUi
       final Integer id = cursor.getInt(mMemoIdx);
       vh.path.setTag(path);
       vh.id.setTag(id);
+     
 
-      vh.detailControl.setOnClickListener(new View.OnClickListener() {
-
-        @Override
-        public void onClick(View arg0) {
-          Intent intent = new Intent(mContext, MemoDetail.class);
-          intent.putExtra(MemoDetail.MEMO_ID, id);
-          mContext.startActivity(intent);
-        }
-      });
-
-      if (isCurrentPosition) {
-        vh.playControl.setVisibility(View.VISIBLE);
-        vh.tag.setTextColor(Color.WHITE);
-        vh.createDate.setTextColor(Color.WHITE);
-        vh.duration.setTextColor(Color.WHITE);
-      } else {
+      File file = new File(path);
+      if (!file.exists()) {
+        vh.detailControl.setEnabled(false);
         vh.playControl.setVisibility(View.INVISIBLE);
-        vh.tag.setTextColor(Color.BLACK);
-        vh.createDate.setTextColor(Color.GRAY);
-        vh.duration.setTextColor(Color.BLUE);
-        vh.playControl.setImageResource(R.drawable.list_play);
-      }
-
-      vh.playControl.setOnClickListener(new View.OnClickListener() {
-
-        @Override
-        public void onClick(View arg0) {
-          int state = mRecorder.getState();
-          if (state == Recorder.IDLE_STATE) {
-            mCurrentMediaPlayer = mRecorder.createMediaPlayer(path);
-            mRecorder.startPlayback();
-            vh.playControl.setImageResource(R.drawable.list_pause);
-          } else if (state == Recorder.PLAYER_PAUSE_STATE) {
-            mRecorder.startPlayback();
-            vh.playControl.setImageResource(R.drawable.list_pause);
-          } else if (state == Recorder.PLAYING_STATE) {
-            mRecorder.pausePlayback();
-            vh.playControl.setImageResource(R.drawable.list_play);
-          }
-
-          mCurrentMediaPlayer.setOnCompletionListener(new OnCompletionListener() {
-
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-              vh.playControl.setImageResource(R.drawable.list_play);
-              mRecorder.stopPlayback();
-            }
-          });
-
-          long next = refreshNow();
-          queueNextRefresh(next);
-
+        if (isCurrentPosition) {
+          view.setBackgroundColor(mCurrentBgColor);
+          vh.tag.setTextColor(Color.WHITE);
+          vh.createDate.setTextColor(Color.WHITE);
+          vh.duration.setTextColor(Color.WHITE);
+        }else{
+          view.setBackgroundColor(Color.LTGRAY);
+          vh.tag.setTextColor(Color.BLACK);
+          vh.createDate.setTextColor(Color.GRAY);
+          vh.duration.setTextColor(Color.BLUE);
         }
-      });
+      } else {
+        if (isCurrentPosition) {
+          vh.playControl.setVisibility(View.VISIBLE);
+          vh.tag.setTextColor(Color.WHITE);
+          vh.createDate.setTextColor(Color.WHITE);
+          vh.duration.setTextColor(Color.WHITE);
+        } else {
+          vh.playControl.setVisibility(View.INVISIBLE);
+          vh.tag.setTextColor(Color.BLACK);
+          vh.createDate.setTextColor(Color.GRAY);
+          vh.duration.setTextColor(Color.BLUE);
+          vh.playControl.setImageResource(R.drawable.list_play);
+        }
+        
+        view.setBackgroundColor(mCurrentBgColor);
+        vh.detailControl.setEnabled(true);
+        vh.detailControl.setOnClickListener(new View.OnClickListener() {
 
+          @Override
+          public void onClick(View arg0) {
+            Intent intent = new Intent(mContext, MemoDetail.class);
+            intent.putExtra(MemoDetail.MEMO_ID, id);
+            mContext.startActivity(intent);
+          }
+        });
+
+        vh.playControl.setOnClickListener(new View.OnClickListener() {
+
+          @Override
+          public void onClick(View arg0) {
+            int state = mRecorder.getState();
+            if (state == Recorder.IDLE_STATE) {
+              mCurrentMediaPlayer = mRecorder.createMediaPlayer(path);
+              mRecorder.startPlayback();
+              vh.playControl.setImageResource(R.drawable.list_pause);
+            } else if (state == Recorder.PLAYER_PAUSE_STATE) {
+              mRecorder.startPlayback();
+              vh.playControl.setImageResource(R.drawable.list_pause);
+            } else if (state == Recorder.PLAYING_STATE) {
+              mRecorder.pausePlayback();
+              vh.playControl.setImageResource(R.drawable.list_play);
+            }
+
+            mCurrentMediaPlayer.setOnCompletionListener(new OnCompletionListener() {
+
+              @Override
+              public void onCompletion(MediaPlayer mp) {
+                vh.playControl.setImageResource(R.drawable.list_play);
+                mRecorder.stopPlayback();
+              }
+            });
+
+            long next = refreshNow();
+            queueNextRefresh(next);
+
+          }
+        });
+      }
     }
 
     @Override

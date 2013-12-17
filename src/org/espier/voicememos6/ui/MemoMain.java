@@ -13,16 +13,16 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.espier.voicememos.ui;
+package org.espier.voicememos6.ui;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.espier.voicememos.R;
-import org.espier.voicememos.model.VoiceMemo;
-import org.espier.voicememos.util.Recorder;
-import org.espier.voicememos.util.StorageUtil;
+import org.espier.voicememos6.R;
+import org.espier.voicememos6.model.VoiceMemo;
+import org.espier.voicememos6.util.Recorder;
+import org.espier.voicememos6.util.StorageUtil;
 
 import android.content.ContentValues;
 import android.content.Intent;
@@ -171,6 +171,9 @@ public class MemoMain extends BaseUi implements OnClickListener, Recorder.OnStat
     MediaPlayer mediaPlayer = mRecorder.createMediaPlayer(filepath);
     int duration = mediaPlayer.getDuration();
     mRecorder.stopPlayback();
+    if(duration < 1000){
+      return;
+    }
 
     cv.put(VoiceMemo.Memos.DATA, filepath);
     cv.put(VoiceMemo.Memos.LABEL, title);

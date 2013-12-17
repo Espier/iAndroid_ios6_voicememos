@@ -5,7 +5,7 @@
 	android:gravity="bottom" android:orientation="vertical">
 
 	<LinearLayout android:layout_width="fill_parent"
-		android:layout_height="180dip" android:background="@drawable/list_buttom_bg"
+		android:layout_height="190dip" android:background="@drawable/bg_menu__bottom"
 		android:orientation="vertical">
 		<Button android:id="@+id/memo_del_ok"
 			android:layout_marginLeft="20dip" android:layout_marginRight="20dip"

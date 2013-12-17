@@ -19,7 +19,7 @@
      <string name="record_stop">Pause</string>
      
     <string name="trim_voice_memo">Trim Voice Memo</string>
-    <string name="cancel">Cancle</string>
+    <string name="cancel">Cancel</string>
     <string name="trim_memo">Trim Voice Memo</string>
     <string name="memo_short">Fail to trim because length of voice memo is too short</string>
     <string name="share_memo">Share</string>

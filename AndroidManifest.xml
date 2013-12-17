@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="org.espier.voicememos" android:versionCode="1"
+	package="org.espier.voicememos6" android:versionCode="1"
 	android:versionName="1.0.0">
 
 	<uses-sdk android:minSdkVersion="8" />
@@ -11,11 +11,11 @@
 	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 	<application android:icon="@drawable/icon" android:label="@string/evm_app_name">
-		<provider android:name=".db.MemosProvider"
+		<provider android:name="org.espier.voicememos6.db.MemosProvider"
 			android:authorities="org.espier.voicememos.Memo" />
 
 		<activity android:name=".ui.MemoMain"
-			android:label="@string/evm_app_name"
+			android:screenOrientation="portrait" android:label="@string/evm_app_name"
 			android:theme="@android:style/Theme.NoTitleBar">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
@@ -36,7 +36,7 @@
 			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
 		<activity android:name=".ui.LabelCustom"
 			android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" />
-		<activity android:name=".ui.LabelSelect"
+		<activity android:name="org.espier.voicememos6.ui.LabelSelect"
 			android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" />
 	</application>
 

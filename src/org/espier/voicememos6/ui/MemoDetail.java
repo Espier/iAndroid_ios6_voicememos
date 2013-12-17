@@ -13,14 +13,13 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.espier.voicememos.ui;
-
+package org.espier.voicememos6.ui;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.espier.voicememos.R;
-import org.espier.voicememos.model.VoiceMemo;
-import org.espier.voicememos.util.MemosUtils;
+import org.espier.voicememos6.R;
+import org.espier.voicememos6.model.VoiceMemo;
+import org.espier.voicememos6.util.MemosUtils;
 
 import android.app.Activity;
 import android.content.ContentUris;
@@ -136,8 +135,7 @@ public class MemoDetail extends BaseUi implements OnClickListener {
     if (resultCode == Activity.RESULT_OK) {
       switch (requestCode) {
         case REQUEST_LABEL_SELECT:
-          mLabelName = data.getStringExtra(LabelSelect.LABEL_NEW);
-          mLabelView.setText(mLabelName);
+          mLabelView.setText(data.getStringExtra(LabelSelect.LABEL_NEW));
           mLabelType = data.getIntExtra(LabelSelect.LABEL_TYPE, 0);
           break;
         case REQUEST_EDIT_MEMO:

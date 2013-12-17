@@ -15,10 +15,10 @@
  * the License.
  */
 
-package org.espier.voicememos.ui;
+package org.espier.voicememos6.ui;
 
-import org.espier.voicememos.R;
-import org.espier.voicememos.util.Recorder;
+import org.espier.voicememos6.R;
+import org.espier.voicememos6.util.Recorder;
 
 import android.content.Context;
 import android.graphics.Canvas;

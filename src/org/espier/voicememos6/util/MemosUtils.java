@@ -14,12 +14,12 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.espier.voicememos.util;
+package org.espier.voicememos6.util;
 
 import java.util.Formatter;
 import java.util.Locale;
 
-import org.espier.voicememos.R;
+import org.espier.voicememos6.R;
 
 import android.content.Context;
 import android.content.Intent;

@@ -12,11 +12,11 @@
  * the License.
  */
 
-package org.espier.voicememos.db;
+package org.espier.voicememos6.db;
 
 import java.util.HashMap;
 
-import org.espier.voicememos.model.VoiceMemo;
+import org.espier.voicememos6.model.VoiceMemo;
 
 import android.content.ContentProvider;
 import android.content.ContentUris;

@@ -13,16 +13,16 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.espier.voicememos.ui;
+package org.espier.voicememos6.ui;
 
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-import org.espier.voicememos.R;
-import org.espier.voicememos.model.VoiceMemo;
-import org.espier.voicememos.util.AMRFileUtils;
-import org.espier.voicememos.util.Recorder;
+import org.espier.voicememos6.R;
+import org.espier.voicememos6.model.VoiceMemo;
+import org.espier.voicememos6.util.AMRFileUtils;
+import org.espier.voicememos6.util.Recorder;
 
 import android.app.Activity;
 import android.content.ContentUris;

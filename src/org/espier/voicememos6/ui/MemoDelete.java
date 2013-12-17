@@ -13,9 +13,9 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.espier.voicememos.ui;
+package org.espier.voicememos6.ui;
 
-import org.espier.voicememos.R;
+import org.espier.voicememos6.R;
 
 import android.app.Activity;
 import android.os.Bundle;

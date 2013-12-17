@@ -12,7 +12,7 @@
  * the License.
  */
 
-package org.espier.voicememos.model;
+package org.espier.voicememos6.model;
 
 import android.net.Uri;
 import android.provider.BaseColumns;

@@ -15,7 +15,7 @@
  * the License.
  */
 
-package org.espier.voicememos.util;
+package org.espier.voicememos6.util;
 
 import java.io.File;
 import java.io.FileInputStream;
