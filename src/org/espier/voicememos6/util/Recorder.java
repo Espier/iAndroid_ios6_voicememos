@@ -1,14 +1,14 @@
 /*
  * Copyright (C) 2011 The Android Open Source Project Copyright (C) 2013
  * robin.pei(webfanren@gmail.com)
- * 
+ *
  * The code is developed under sponsor from Beijing FMSoft Tech. Co. Ltd(http://www.fmsoft.cn)
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
  * in compliance with the License. You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software distributed under the License
  * is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express
  * or implied. See the License for the specific language governing permissions and limitations under
@@ -35,6 +35,8 @@ import android.os.Environment;
 import android.util.Log;
 
 public class Recorder implements OnCompletionListener, OnErrorListener {
+    private static final String DIR_NAME = "Recorder";
+
   static final String SAMPLE_PREFIX = "recording";
   static final String SAMPLE_SUFFIX = ".amr";
   static final String SAMPLE_PATH_KEY = "sample_path";
@@ -131,7 +133,7 @@ public class Recorder implements OnCompletionListener, OnErrorListener {
   }
 
   public void startRecording(Context context) {
-    File sampleDir = Environment.getExternalStorageDirectory();
+        File sampleDir = getOutputDir();
     File tempFile = null;
     try {
       tempFile = File.createTempFile(SAMPLE_PREFIX, SAMPLE_SUFFIX, sampleDir);
@@ -178,7 +180,7 @@ public class Recorder implements OnCompletionListener, OnErrorListener {
   }
 
   public static File createTempFile() {
-    File sampleDir = Environment.getExternalStorageDirectory();
+        File sampleDir = getOutputDir();
     File tempFile = null;
     try {
       tempFile = File.createTempFile(SAMPLE_PREFIX, SAMPLE_SUFFIX, sampleDir);
@@ -280,13 +282,15 @@ public class Recorder implements OnCompletionListener, OnErrorListener {
 
 
 
-  public boolean onError(MediaPlayer mp, int what, int extra) {
+  @Override
+public boolean onError(MediaPlayer mp, int what, int extra) {
     stopPlayback();
     setError(SDCARD_ACCESS_ERROR);
     return true;
   }
 
-  public void onCompletion(MediaPlayer mp) {
+  @Override
+public void onCompletion(MediaPlayer mp) {
     stopPlayback();
   }
 
@@ -311,7 +315,7 @@ public class Recorder implements OnCompletionListener, OnErrorListener {
       return;
     }
 
-    File sampleDir = Environment.getExternalStorageDirectory();
+        File sampleDir = getOutputDir();
     File tempFile = null;
     try {
       tempFile = File.createTempFile(SAMPLE_PREFIX, SAMPLE_SUFFIX, sampleDir);
@@ -365,4 +369,13 @@ public class Recorder implements OnCompletionListener, OnErrorListener {
 
     mSampleFile = tempFile;
   }
+
+    private static File getOutputDir() {
+        File outDir = new File(Environment.getExternalStorageDirectory(), DIR_NAME);
+        if (!outDir.exists()) {
+            outDir.mkdirs();
+        }
+        return outDir;
+
+    }
 }

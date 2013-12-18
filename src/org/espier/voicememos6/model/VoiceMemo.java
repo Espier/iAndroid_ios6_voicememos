@@ -25,7 +25,7 @@ import android.provider.BaseColumns;
  */
 public final class VoiceMemo {
 
-  public static final String AUTHORITY = "org.espier.voicememos.Memo";
+  public static final String AUTHORITY = "org.espier.voicememos6.Memo";
 
   // This class cannot be instantiated
   private VoiceMemo() {}

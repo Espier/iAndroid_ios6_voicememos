@@ -12,9 +12,9 @@
 
 	<application android:icon="@drawable/icon" android:label="@string/evm_app_name">
 		<provider android:name="org.espier.voicememos6.db.MemosProvider"
-			android:authorities="org.espier.voicememos.Memo" />
+			android:authorities="org.espier.voicememos6.Memo" />
 
-		<activity android:name=".ui.MemoMain"
+		<activity android:name="org.espier.voicememos6.ui.MemoMain"
 			android:screenOrientation="portrait" android:label="@string/evm_app_name"
 			android:theme="@android:style/Theme.NoTitleBar">
 			<intent-filter>
@@ -23,18 +23,18 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 			</intent-filter>
 		</activity>
-		<activity android:name=".ui.MemoList"
+		<activity android:name="org.espier.voicememos6.ui.MemoList"
 			android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar">
 		</activity>
-		<activity android:name=".ui.MemoDelete"
+		<activity android:name="org.espier.voicememos6.ui.MemoDelete"
 			android:screenOrientation="portrait"
 			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-		<activity android:name=".ui.MemoDetail"
+		<activity android:name="org.espier.voicememos6.ui.MemoDetail"
 			android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" />
-		<activity android:name=".ui.MemoEdit"
+		<activity android:name="org.espier.voicememos6.ui.MemoEdit"
 			android:screenOrientation="portrait"
 			android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-		<activity android:name=".ui.LabelCustom"
+		<activity android:name="org.espier.voicememos6.ui.LabelCustom"
 			android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" />
 		<activity android:name="org.espier.voicememos6.ui.LabelSelect"
 			android:screenOrientation="portrait" android:theme="@android:style/Theme.NoTitleBar" />
